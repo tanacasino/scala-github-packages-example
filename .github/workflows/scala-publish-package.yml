@@ -3,6 +3,7 @@ name: Scala Publish Package
 on:
   push:
     tags:
+    - '*'
 
 jobs:
   build:
