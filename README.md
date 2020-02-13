@@ -1,0 +1,1 @@
+# scala-github-packages-example
