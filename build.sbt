@@ -20,7 +20,7 @@ lazy val libDependencies = Seq(
 ThisBuild / githubOwner := "tanacasino"
 ThisBuild / githubRepository := "sbt-github-packages-example"
 ThisBuild / githubActor := sys.env.getOrElse("GITHUB_ACTOR", "tanacasino")
-ThisBuild / githubTokenSource := TokenSource.Environment("GITHUB_TOKEN")
+ThisBuild / githubTokenSource := TokenSource.Environment("GITHUB_API_TOKEN")
 
 
 lazy val root = (project in file("."))
