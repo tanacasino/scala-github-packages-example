@@ -1,5 +1,5 @@
 ThisBuild / scalaVersion := "2.13.1"
-ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / version := "0.1.0"
 ThisBuild / organization := "com.github.tanacasino.example"
 ThisBuild / organizationName := "tanacasino.example"
 ThisBuild / scalacOptions ++= Seq(
@@ -17,11 +17,10 @@ lazy val libDependencies = Seq(
   Dependencies.ScalaTest % Test
 )
 
-ThisBuild / githubOwner := "tanacasino"
-ThisBuild / githubRepository := "sbt-github-packages-example"
-ThisBuild / githubActor := sys.env.getOrElse("GITHUB_ACTOR", "tanacasino")
-ThisBuild / githubTokenSource := TokenSource.Environment("GITHUB_API_TOKEN")
-
+githubOwner := "tanacasino"
+githubRepository := "scala-github-packages-example"
+githubActor := sys.env.getOrElse("GITHUB_ACTOR", "tanacasino")
+githubTokenSource := TokenSource.Environment("GITHUB_API_TOKEN")
 
 lazy val root = (project in file("."))
   .settings(
