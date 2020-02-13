@@ -15,8 +15,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-      - name: Publish package
-        env:
-          GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
-        run: sbt publish
+    - name: Publish package
+      env:
+        GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
+      run: sbt publish
 
