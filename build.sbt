@@ -17,6 +17,12 @@ lazy val libDependencies = Seq(
   Dependencies.ScalaTest % Test
 )
 
+ThisBuild / githubOwner := "tanacasino"
+ThisBuild / githubRepository := "sbt-github-packages-example"
+ThisBuild / githubActor := sys.env.getOrElse("GITHUB_ACTOR", "tanacasino")
+ThisBuild / githubTokenSource := TokenSource.Environment("GITHUB_TOKEN")
+
+
 lazy val root = (project in file("."))
   .settings(
     name := "scala-github-packages-example",
